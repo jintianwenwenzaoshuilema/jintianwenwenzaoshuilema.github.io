@@ -4,20 +4,29 @@ You can use the [editor on GitHub](https://github.com/jintianwenwenzaoshuilema/j
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-<table border="0">
-  <tr>
-    <td width="75%">
-      <h1>张三</h1>
-      <p><b>硕士研究生</b></p>
-      <p><b>××大学××学院</b></p>
-      <p><b>邮箱：1234567789@qq.com</b></p>
-      <p><b>地址：××市××区××路××号××大学，××楼，邮编×××</b></p>
-    </td>
-    <td width="25%">
-      <img src="/zhengjianzhao.jpg" width="100%">      % 插入证件照代码
-    </td>
-  </tr>
-</table>
+
+<script>
+    var inputElement = document.getElementById("2021-04-28.json");
+    inputElement.addEventListener("change", handleFiles, false);
+    function handleFiles() {
+       var selectedFile = document.getElementById("files").files[0];//获取读取的File对象
+       var name = selectedFile.name;//读取选中文件的文件名
+       var size = selectedFile.size;//读取选中文件的大小
+       console.log("文件名:"+name+"大小："+size);
+       var reader = new FileReader();//这里是核心！！！读取操作就是由它完成的。
+        reader.readAsText(selectedFile);//读取文件的内容
+
+        reader.onload = function(){
+            console.log("读取结果：", this.result);//当读取完成之后会回调这个函数，然后此时文件的内容存储到了result中。直接操作即可。
+
+            console.log("读取结果转为JSON：");
+            let json = JSON.parse(this.result);
+            console.log(json.name);
+            console.log(json.age);
+        };
+
+    }
+</script>
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
