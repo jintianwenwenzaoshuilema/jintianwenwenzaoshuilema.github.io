@@ -11,7 +11,13 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 ### Markdown
 ### Markdown
 ### Markdown
-
+<ul>
+{% for i in site.data.a %}
+  <li>
+      {{ i }}
+  </li>
+{% endfor %}
+</ul>
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
