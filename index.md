@@ -6,9 +6,9 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 
 <div>
-{% for i,j in site.data.a %}
+{% for i in site.data.a %}
   <li>
-      {{ i }}  {{ j }}
+      {{ i.key }}
   </li>
 {% endfor %}
 </div>
