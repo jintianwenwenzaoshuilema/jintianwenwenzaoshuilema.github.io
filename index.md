@@ -7,7 +7,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 {% for d in site.data.dir %}
 
-{% for i in site.data.d %}
+{% for i in site.data.{{d}} %}
 |{{forloop.index}}|{{ i[0] }}|{{ i[1] }}|{% endfor %}
 
 {% endfor %}
