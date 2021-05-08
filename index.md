@@ -4,9 +4,14 @@ You can use the [editor on GitHub](https://github.com/jintianwenwenzaoshuilema/j
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-<script>
-</script>
 
+<div>
+{% for i in site.data.a %}
+  <li>
+      {{ i }}
+  </li>
+{% endfor %}
+</div>
 ### Markdown
 ### Markdown
 ### Markdown
@@ -16,13 +21,6 @@ Markdown is a lightweight and easy-to-use syntax for styling your writing. It in
 ```markdown
 Syntax highlighted code block
 
-<ul>
-{% for i in site.data.a %}
-  <li>
-      {{ i }}
-  </li>
-{% endfor %}
-</ul>
 # Header 1
 ## Header 2
 ### Header 3
