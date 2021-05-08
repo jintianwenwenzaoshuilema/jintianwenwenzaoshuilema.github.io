@@ -8,7 +8,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 <div>
 {% for i in site.data.a %}
   <li>
-      {{ i[0] }}
+      {{ i[0] }}    {{ i[1] }}
   </li>
 {% endfor %}
 </div>
