@@ -5,9 +5,13 @@ You can use the [editor on GitHub](https://github.com/jintianwenwenzaoshuilema/j
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 
-{% for i in site.data.a %}
-|{{forloop.index}}|{{ i[0] }}|{{ i[1] }}|{% endfor %}
 
+{% for i in site.data.a %}
+### {{ i[0] }}
+{% for j in i[1]}
+|{{forloop.index}}|{{ j[0] }}|{{ j[1] }}|{% endfor %}
+
+{% endfor %}
 ### Markdown
 ### Markdown
 ### Markdown
