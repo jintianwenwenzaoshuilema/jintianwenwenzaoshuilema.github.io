@@ -5,13 +5,11 @@ You can use the [editor on GitHub](https://github.com/jintianwenwenzaoshuilema/j
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 
-<div>
+|name|score|
+|---|---|
 {% for i in site.data.a %}
-  <li>
-      {{ i[0] }}    {{ i[1] }}
-  </li>
+      | {{ i[0] }} | {{ i[1] }} |
 {% endfor %}
-</div>
 ### Markdown
 ### Markdown
 ### Markdown
