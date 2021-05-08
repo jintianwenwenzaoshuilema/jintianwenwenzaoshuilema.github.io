@@ -8,9 +8,9 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 |name|score|
 |:------:|:------:|
 |a|a|
-|{% for i in site.data.a %}|
+{% for i in site.data.a %}|
 |{{ i[0] }}|{{ i[1] }}|
-|{% endfor %}|
+|{% endfor %}
 
 ### Markdown
 ### Markdown
